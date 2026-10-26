@@ -1,0 +1,6 @@
+{
+  "name": "Fraction Champions: Secret Fraction Code",
+  "description": "Game turnamen intelektual matematika pecahan untuk kelas IV SD: Mengidentifikasi, mengelompokkan, membandingkan, mengurutkan, dan membuktikan pecahan senilai dalam arena kompetisi kelompok futuristik.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
