@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import confetti from 'canvas-confetti';
-import { Trophy, Award, RotateCcw, Home, Sparkles, Star, Medal } from 'lucide-react';
+import { Trophy, RotateCcw, Home, Sparkles, Medal } from 'lucide-react';
 import { Team } from '../types/game';
 import { sounds } from '../utils/soundEffects';
+import { ASSETS } from '../utils/assets';
+import { FracterraMascot } from './FracterraMascot';
 
 interface ChampionshipCeremonyProps {
   teams: Team[];
@@ -76,35 +78,28 @@ export const ChampionshipCeremony: React.FC<ChampionshipCeremonyProps> = ({
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 flex flex-col items-center">
-          {/* Trophy Image */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-4">
+          {/* Trophy & Mascot Image */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 mb-6">
+            <FracterraMascot size="lg" />
+
             <div className="relative group">
-              <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-2 border-amber-400 bg-slate-950 shadow-2xl">
+              <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-amber-400 bg-slate-950 shadow-2xl flex items-center justify-center">
                 <img
-                  src="/src/assets/images/fracterra_dayak_forest_referee_1793010185625.jpg"
-                  alt="Wasit Robot Dayak Fracterra"
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-900 border border-amber-400 text-amber-300 px-2 py-0.5 rounded-full text-[10px] font-black tracking-wider shadow whitespace-nowrap">
-                FRACTERRA
-              </div>
-            </div>
-            <div className="relative group">
-              <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-2 border-amber-400 bg-slate-950 shadow-2xl">
-                <img
-                  src="/src/assets/images/forest_rainforest_trophy_1793010185822.jpg"
+                  src={ASSETS.trophy}
                   alt="Trofi Emas Enggang Rimba Borneo"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = ASSETS.publicFallbacks.trophy;
+                  }}
                 />
               </div>
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-900 border border-amber-400 text-amber-300 px-2 py-0.5 rounded-full text-[10px] font-black tracking-wider shadow whitespace-nowrap">
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-slate-900 border border-amber-400 text-amber-300 px-3 py-0.5 rounded-full text-xs font-black tracking-wider shadow whitespace-nowrap">
                 PIALA ENGGANG RIMBA
               </div>
             </div>
           </div>
+
           <div className="bg-amber-950/40 border border-amber-500/40 rounded-xl px-4 py-2 text-xs text-amber-200 max-w-md mx-auto mb-4 italic">
             "Tabe Salam! Selamat kepada para Juara Rimba Sejati! Kalian telah berhasil membuka seluruh kode rahasia pecahan di Hutan Belantara Kalimantan!" — Wasit Fracterra
           </div>
@@ -231,7 +226,6 @@ export const ChampionshipCeremony: React.FC<ChampionshipCeremonyProps> = ({
                 <th className="py-3 px-3 text-center">B1: Senilai</th>
                 <th className="py-3 px-3 text-center">B2: Bandingkan</th>
                 <th className="py-3 px-3 text-center">B3: Urutkan</th>
-                
                 <th className="py-3 px-3 text-right">Total Poin</th>
               </tr>
             </thead>
@@ -246,7 +240,6 @@ export const ChampionshipCeremony: React.FC<ChampionshipCeremonyProps> = ({
                   <td className="py-3 px-3 text-center font-mono">{t.scores.round1}</td>
                   <td className="py-3 px-3 text-center font-mono">{t.scores.round2}</td>
                   <td className="py-3 px-3 text-center font-mono">{t.scores.round3}</td>
-                  
                   <td className="py-3 px-3 text-right font-mono font-black text-amber-300 text-sm">
                     {t.scores.total}
                   </td>

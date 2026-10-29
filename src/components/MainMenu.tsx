@@ -1,7 +1,9 @@
 import React from 'react';
-import { Trophy, Play, BookOpen, Settings, HelpCircle, Shield, Sparkles, Award } from 'lucide-react';
+import { Trophy, Play, BookOpen, Settings, HelpCircle } from 'lucide-react';
 import { GameView } from '../types/game';
 import { sounds } from '../utils/soundEffects';
+import { ASSETS } from '../utils/assets';
+import { FracterraMascot } from './FracterraMascot';
 
 interface MainMenuProps {
   onNavigate: (view: GameView) => void;
@@ -21,10 +23,13 @@ export const MainMenu: React.FC<MainMenuProps> = ({
       {/* Background Arena Image with measured scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/borneo_rainforest_arena_bg_1793010185668.jpg"
+          src={ASSETS.borneoBg}
           alt="Arena Rimba Hutan Tropis Borneo Fraction Champions"
           className="w-full h-full object-cover object-center opacity-30"
           referrerPolicy="no-referrer"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = ASSETS.publicFallbacks.borneoBg;
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/40 to-slate-950/90" />
@@ -36,23 +41,10 @@ export const MainMenu: React.FC<MainMenuProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full my-auto">
           {/* Left Column: Mascot Host with Speech bubble */}
           <div className="lg:col-span-4 flex flex-col items-center text-center">
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-amber-500 rounded-3xl blur-md opacity-70 group-hover:opacity-100 transition duration-500" />
-              <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-cyan-400 bg-slate-900 shadow-2xl">
-                <img
-                  src="/src/assets/images/fracterra_dayak_forest_referee_1793010185625.jpg"
-                  alt="Fracterra Robot Dayak Wasit Fraction Champions"
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-slate-900 border border-cyan-400 text-cyan-300 px-3 py-0.5 rounded-full text-xs font-bold tracking-wider shadow-lg whitespace-nowrap">
-                FRACTERRA · WASIT RIMBA DAYAK
-              </div>
-            </div>
+            <FracterraMascot size="lg" />
 
             {/* Mascot Dialogue */}
-            <div className="mt-5 bg-slate-900/80 backdrop-blur-md border border-cyan-500/40 rounded-xl p-3 text-xs sm:text-sm text-slate-200 max-w-xs shadow-lg">
+            <div className="mt-5 bg-slate-900/80 backdrop-blur-md border border-emerald-500/40 rounded-xl p-3.5 text-xs sm:text-sm text-slate-200 max-w-xs shadow-lg">
               <p className="leading-relaxed">
                 "Tabe Salam! Selamat datang di Arena Hutan Pecahan Borneo! Mari pecahkan rahasia kode pecahan bersama Fracterra di pedalaman rimba Kalimantan!"
               </p>
@@ -72,7 +64,7 @@ export const MainMenu: React.FC<MainMenuProps> = ({
             {/* Grand Title */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black font-display tracking-tight uppercase leading-none">
               <span className="text-white">FRACTION </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-400">
                 CHAMPIONS
               </span>
             </h1>
@@ -133,7 +125,7 @@ export const MainMenu: React.FC<MainMenuProps> = ({
                     sounds.playClick();
                     onStartNewMatch();
                   }}
-                  className="flex-1 min-w-[220px] px-8 py-4 rounded-xl font-black text-lg text-slate-950 bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300 hover:brightness-110 shadow-xl shadow-emerald-500/30 text-stone-950 flex items-center justify-center gap-2 transition-all transform active:scale-98"
+                  className="flex-1 min-w-[220px] px-8 py-4 rounded-xl font-black text-lg text-slate-950 bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300 hover:brightness-110 shadow-xl shadow-emerald-500/30 flex items-center justify-center gap-2 transition-all transform active:scale-98"
                 >
                   <Play className="w-6 h-6 fill-current" />
                   MULAI KOMPETISI

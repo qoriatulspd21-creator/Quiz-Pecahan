@@ -26,6 +26,7 @@ import { RoundScoreboard } from './components/RoundScoreboard';
 import { ChampionshipCeremony } from './components/ChampionshipCeremony';
 import { PracticeMode } from './components/PracticeMode';
 import { sounds } from './utils/soundEffects';
+import { ASSETS } from './utils/assets';
 
 const STORAGE_KEY = 'fraction_champions_match_v1';
 
@@ -379,10 +380,11 @@ export default function App() {
       {/* Universal Rainforest Atmosphere Layer */}
       <div className="fixed inset-0 z-0 pointer-events-none opacity-20">
         <img
-          src="/src/assets/images/borneo_rainforest_arena_bg_1793010185668.jpg"
+          src={ASSETS.borneoBg}
           alt="Latar Hutan Borneo"
           className="w-full h-full object-cover object-center"
           referrerPolicy="no-referrer"
+          onError={(e) => { (e.target as HTMLImageElement).src = ASSETS.publicFallbacks.borneoBg; }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-stone-950/80 via-emerald-950/50 to-stone-950/90" />
       </div>
