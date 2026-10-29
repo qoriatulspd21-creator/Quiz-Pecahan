@@ -76,7 +76,7 @@ export const TurnEndModal: React.FC<TurnEndModalProps> = ({
         <div className="bg-slate-950/80 border border-amber-500/40 rounded-xl p-3 text-xs text-amber-100 leading-relaxed flex items-start gap-3 shadow-inner">
           <div className="w-11 h-11 rounded-xl overflow-hidden border border-amber-400 shrink-0 bg-slate-900 shadow-md">
             <img
-              src="/src/assets/images/robot_dayak_fracterra_1792997026451.jpg"
+              src="/src/assets/images/fracterra_dayak_forest_referee_1793010185625.jpg"
               alt="Wasit Fracterra"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
@@ -85,7 +85,7 @@ export const TurnEndModal: React.FC<TurnEndModalProps> = ({
           <div>
             <div className="flex items-center gap-1.5 font-bold text-amber-300 mb-0.5">
               <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              <span>Wasit Fracterra (Robot Dayak):</span>
+              <span>Wasit Fracterra (Penjaga Rimba Dayak):</span>
             </div>
             <p className="text-slate-200">{summary.explanation}</p>
           </div>

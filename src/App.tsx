@@ -39,12 +39,12 @@ const DEFAULT_SETTINGS: GameSettings = {
 const DEFAULT_TEAMS: Team[] = [
   {
     id: 'team-1',
-    name: 'Tim Alpha Falcon',
-    color: 'from-sky-500 to-blue-600',
-    accentColor: '#0284c7',
-    badgeBg: 'bg-sky-500/20 text-sky-300 border-sky-400',
-    borderColor: 'border-sky-500',
-    textColor: 'text-sky-400',
+    name: 'Kelompok Enggang Borneo',
+    color: 'from-emerald-500 to-teal-600',
+    accentColor: '#059669',
+    badgeBg: 'bg-emerald-500/20 text-emerald-300 border-emerald-400',
+    borderColor: 'border-emerald-500',
+    textColor: 'text-emerald-400',
     avatar: '🦅',
     members: 'Ahmad, Siti, Doni',
     scores: { round1: 0, round2: 0, round3: 0, round4: 0, round5: 0, total: 0 },
@@ -52,8 +52,8 @@ const DEFAULT_TEAMS: Team[] = [
   },
   {
     id: 'team-2',
-    name: 'Tim Cyber Tiger',
-    color: 'from-orange-500 to-amber-600',
+    name: 'Kelompok Macan Dahan',
+    color: 'from-amber-500 to-orange-600',
     accentColor: '#ea580c',
     badgeBg: 'bg-orange-500/20 text-orange-300 border-orange-400',
     borderColor: 'border-orange-500',
@@ -65,39 +65,39 @@ const DEFAULT_TEAMS: Team[] = [
   },
   {
     id: 'team-3',
-    name: 'Tim Quantum Vortex',
-    color: 'from-purple-500 to-violet-600',
-    accentColor: '#9333ea',
-    badgeBg: 'bg-purple-500/20 text-purple-300 border-purple-400',
-    borderColor: 'border-purple-500',
-    textColor: 'text-purple-400',
-    avatar: '⚡',
+    name: 'Kelompok Orangutan Rimba',
+    color: 'from-teal-500 to-cyan-600',
+    accentColor: '#0d9488',
+    badgeBg: 'bg-teal-500/20 text-teal-300 border-teal-400',
+    borderColor: 'border-teal-500',
+    textColor: 'text-teal-400',
+    avatar: '🦧',
     members: 'Citra, Kevin, Dewi',
     scores: { round1: 0, round2: 0, round3: 0, round4: 0, round5: 0, total: 0 },
     timeUsedSeconds: { round1: 0, round2: 0, round3: 0, round4: 0, round5: 0, total: 0 },
   },
   {
     id: 'team-4',
-    name: 'Tim Emerald Titan',
-    color: 'from-emerald-500 to-teal-600',
-    accentColor: '#059669',
-    badgeBg: 'bg-emerald-500/20 text-emerald-300 border-emerald-400',
-    borderColor: 'border-emerald-500',
-    textColor: 'text-emerald-400',
-    avatar: '🐉',
+    name: 'Kelompok Buaya Mahakam',
+    color: 'from-lime-500 to-emerald-600',
+    accentColor: '#65a30d',
+    badgeBg: 'bg-lime-500/20 text-lime-300 border-lime-400',
+    borderColor: 'border-lime-500',
+    textColor: 'text-lime-400',
+    avatar: '🐊',
     members: 'Eko, Nisa, Gilang',
     scores: { round1: 0, round2: 0, round3: 0, round4: 0, round5: 0, total: 0 },
     timeUsedSeconds: { round1: 0, round2: 0, round3: 0, round4: 0, round5: 0, total: 0 },
   },
   {
     id: 'team-5',
-    name: 'Tim Solar Phoenix',
-    color: 'from-rose-500 to-pink-600',
-    accentColor: '#e11d48',
-    badgeBg: 'bg-rose-500/20 text-rose-300 border-rose-400',
-    borderColor: 'border-rose-500',
-    textColor: 'text-rose-400',
-    avatar: '🌟',
+    name: 'Kelompok Bekantan Cerdik',
+    color: 'from-amber-400 to-yellow-600',
+    accentColor: '#d97706',
+    badgeBg: 'bg-amber-500/20 text-amber-300 border-amber-400',
+    borderColor: 'border-amber-500',
+    textColor: 'text-amber-400',
+    avatar: '🐒',
     members: 'Rizky, Maya, Tari',
     scores: { round1: 0, round2: 0, round3: 0, round4: 0, round5: 0, total: 0 },
     timeUsedSeconds: { round1: 0, round2: 0, round3: 0, round4: 0, round5: 0, total: 0 },
@@ -375,8 +375,20 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-slate-950">
-      {/* Top Bar Navigation */}
+    <div className="relative min-h-screen bg-stone-950 text-stone-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-stone-950 overflow-x-hidden">
+      {/* Universal Rainforest Atmosphere Layer */}
+      <div className="fixed inset-0 z-0 pointer-events-none opacity-20">
+        <img
+          src="/src/assets/images/borneo_rainforest_arena_bg_1793010185668.jpg"
+          alt="Latar Hutan Borneo"
+          className="w-full h-full object-cover object-center"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-950/80 via-emerald-950/50 to-stone-950/90" />
+      </div>
+
+      <div className="relative z-10 flex-1 flex flex-col">
+        {/* Top Bar Navigation */}
       <Navbar
         currentView={currentView}
         onNavigate={view => {
@@ -504,6 +516,7 @@ export default function App() {
           />
         )}
       </main>
+      </div>
     </div>
   );
 }

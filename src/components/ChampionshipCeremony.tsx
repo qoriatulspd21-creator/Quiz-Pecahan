@@ -64,10 +64,10 @@ export const ChampionshipCeremony: React.FC<ChampionshipCeremonyProps> = ({
           <span>CHAMPIONSHIP GRAND CEREMONY</span>
         </div>
         <h1 className="text-4xl sm:text-6xl font-black font-display tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-500">
-          PENETAPAN JUARA BESAR
+          PENETAPAN JUARA BESAR RIMBA BORNEO
         </h1>
         <p className="text-base text-slate-300 max-w-xl mx-auto">
-          Selamat kepada seluruh tim yang telah membuktikan ketangkasan logika matematika pecahan!
+          Selamat kepada seluruh tim penjelajah yang telah membuktikan ketangkasan logika matematika pecahan di Hutan Kalimantan!
         </p>
       </div>
 
@@ -81,7 +81,7 @@ export const ChampionshipCeremony: React.FC<ChampionshipCeremonyProps> = ({
             <div className="relative group">
               <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-2 border-amber-400 bg-slate-950 shadow-2xl">
                 <img
-                  src="/src/assets/images/robot_dayak_fracterra_1792997026451.jpg"
+                  src="/src/assets/images/fracterra_dayak_forest_referee_1793010185625.jpg"
                   alt="Wasit Robot Dayak Fracterra"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -94,23 +94,23 @@ export const ChampionshipCeremony: React.FC<ChampionshipCeremonyProps> = ({
             <div className="relative group">
               <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-2 border-amber-400 bg-slate-950 shadow-2xl">
                 <img
-                  src="/src/assets/images/championship_trophy_1792627418090.jpg"
-                  alt="Trofi Grand Champion Fraction Champions"
+                  src="/src/assets/images/forest_rainforest_trophy_1793010185822.jpg"
+                  alt="Trofi Emas Enggang Rimba Borneo"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-900 border border-amber-400 text-amber-300 px-2 py-0.5 rounded-full text-[10px] font-black tracking-wider shadow whitespace-nowrap">
-                PIALA EMAS
+                PIALA ENGGANG RIMBA
               </div>
             </div>
           </div>
           <div className="bg-amber-950/40 border border-amber-500/40 rounded-xl px-4 py-2 text-xs text-amber-200 max-w-md mx-auto mb-4 italic">
-            "Tabe Salam! Selamat kepada para Juara Sejati! Kalian telah menuntaskan 3 babak pecahan dengan luar biasa!" — Wasit Fracterra
+            "Tabe Salam! Selamat kepada para Juara Rimba Sejati! Kalian telah berhasil membuka seluruh kode rahasia pecahan di Hutan Belantara Kalimantan!" — Wasit Fracterra
           </div>
 
           <span className="text-xs font-black tracking-widest text-amber-400 uppercase mb-1">
-            GRAND CHAMPION FRACTION CHAMPIONS 2026
+            PENJELAJAH JUARA RIMBA BORNEO 2026
           </span>
           <div className="flex items-center gap-3">
             <span className="text-4xl">{winner.avatar}</span>

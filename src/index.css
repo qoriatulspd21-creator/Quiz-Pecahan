@@ -6,7 +6,7 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    background-color: #020617;
+    background-color: #06110d;
     color: #f8fafc;
   }
 
@@ -22,14 +22,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #061e14;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #064e3b;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #047857;
 }

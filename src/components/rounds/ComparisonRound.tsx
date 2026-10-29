@@ -88,7 +88,7 @@ export const ComparisonRound: React.FC<ComparisonRoundProps> = ({
           </div>
           <div>
             <h3 className="text-base sm:text-lg font-black font-display text-white">
-              BABAK 2: Duel Perbandingan Pecahan (Sama Pembilang / Sama Penyebut)
+              BABAK 2 RIMBA: Duel Perbandingan Pecahan (Sama Pembilang / Sama Penyebut)
             </h3>
             <p className="text-xs text-slate-300">
               Soal {currentIndex + 1} dari {data.questions.length}: {currentQuestion.description}
@@ -114,7 +114,7 @@ export const ComparisonRound: React.FC<ComparisonRoundProps> = ({
       </div>
 
       {/* Holographic Duel Arena */}
-      <div className="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-10 relative overflow-hidden shadow-2xl">
+      <div className="bg-stone-900/90 border border-emerald-900/50 rounded-3xl p-6 sm:p-10 relative overflow-hidden shadow-2xl">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 my-2">
           {/* Left Fraction Podium */}
           <div className="flex flex-col items-center">

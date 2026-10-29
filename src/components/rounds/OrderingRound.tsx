@@ -134,14 +134,14 @@ export const OrderingRound: React.FC<OrderingRoundProps> = ({
   return (
     <div className="max-w-5xl mx-auto px-4 py-6 space-y-6">
       {/* Round Header */}
-      <div className="bg-slate-900/90 border border-purple-500/40 rounded-2xl p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-xl">
+      <div className="bg-stone-900/90 border border-teal-500/40 rounded-2xl p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-xl">
         <div className="flex items-start gap-3">
           <div className="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-400 flex items-center justify-center text-purple-400 shrink-0">
             <ArrowDownUp className="w-5 h-5" />
           </div>
           <div>
             <h3 className="text-base sm:text-lg font-black font-display text-white">
-              BABAK 3: Mengurutkan Pecahan (Sama Pembilang / Sama Penyebut)
+              BABAK 3 RIMBA: Mengurutkan Pecahan (Sama Pembilang / Sama Penyebut)
             </h3>
             <p className="text-xs text-slate-300">
               {currentStageData.title}: {currentStageData.hint}

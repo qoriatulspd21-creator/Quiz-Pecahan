@@ -1,6 +1,8 @@
 {
-  "name": "Fraction Champions: Secret Fraction Code",
-  "description": "Game turnamen intelektual matematika pecahan untuk kelas IV SD: Mengidentifikasi, mengelompokkan, membandingkan, mengurutkan, dan membuktikan pecahan senilai dalam arena kompetisi kelompok futuristik.",
+  "name": "Fraction Champions: Rahasia Rimba Borneo",
+  "description": "Game turnamen intelektual matematika pecahan untuk kelas IV SD di tengah atmosfer hutan tropis Kalimantan bersama Wasit Robot Dayak Fracterra: mengidentifikasi pecahan senilai, membandingkan, mengurutkan, dan membuktikan pecahan senilai.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

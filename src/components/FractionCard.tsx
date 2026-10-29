@@ -59,7 +59,7 @@ export const FractionCard: React.FC<FractionCardProps> = ({
       case 'intruder':
         return 'bg-gradient-to-b from-amber-950 to-red-950 border-amber-500 text-amber-200 shadow-amber-500/30';
       default:
-        return 'bg-gradient-to-b from-slate-900/90 to-slate-950 border-cyan-500/50 text-cyan-50 hover:border-cyan-400 shadow-cyan-500/10';
+        return 'bg-gradient-to-b from-stone-900/95 via-emerald-950/60 to-stone-950 border-emerald-500/50 text-emerald-50 hover:border-emerald-300 shadow-emerald-950/30';
     }
   };
 
@@ -82,7 +82,7 @@ export const FractionCard: React.FC<FractionCardProps> = ({
         transition-all duration-150 cursor-pointer shadow-lg active:scale-95
         ${sizeClasses[size]}
         ${getVariantStyles()}
-        ${isSelected ? 'ring-4 ring-cyan-300 ring-offset-2 ring-offset-slate-950 scale-105 border-white shadow-cyan-400/50' : ''}
+        ${isSelected ? 'ring-4 ring-emerald-300 ring-offset-2 ring-offset-stone-950 scale-105 border-emerald-100 shadow-emerald-400/50' : ''}
         ${isDragging ? 'opacity-40 scale-95' : 'hover:scale-102'}
         ${disabled ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}
         ${className}

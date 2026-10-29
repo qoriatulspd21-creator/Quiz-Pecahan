@@ -14,7 +14,7 @@ const AVATAR_OPTIONS = ['🦅', '🐯', '⚡', '🐉', '🌟', '🐬', '🦁', '
 
 const PRESET_TEAMS: Omit<Team, 'id' | 'scores' | 'timeUsedSeconds'>[] = [
   {
-    name: 'Kelompok 1 (Alpha Falcon)',
+    name: 'Kelompok 1 (Enggang Borneo)',
     color: 'from-sky-500 to-blue-600',
     accentColor: '#0284c7',
     badgeBg: 'bg-sky-500/20 text-sky-300 border-sky-400',
@@ -24,7 +24,7 @@ const PRESET_TEAMS: Omit<Team, 'id' | 'scores' | 'timeUsedSeconds'>[] = [
     members: 'Ahmad, Siti, Doni',
   },
   {
-    name: 'Kelompok 2 (Cyber Tiger)',
+    name: 'Kelompok 2 (Macan Dahan)',
     color: 'from-orange-500 to-amber-600',
     accentColor: '#ea580c',
     badgeBg: 'bg-orange-500/20 text-orange-300 border-orange-400',
@@ -34,33 +34,33 @@ const PRESET_TEAMS: Omit<Team, 'id' | 'scores' | 'timeUsedSeconds'>[] = [
     members: 'Budi, Rina, Farhan',
   },
   {
-    name: 'Kelompok 3 (Quantum Vortex)',
+    name: 'Kelompok 3 (Orangutan Rimba)',
     color: 'from-purple-500 to-violet-600',
     accentColor: '#9333ea',
     badgeBg: 'bg-purple-500/20 text-purple-300 border-purple-400',
     borderColor: 'border-purple-500',
     textColor: 'text-purple-400',
-    avatar: '⚡',
+    avatar: '🦧',
     members: 'Citra, Kevin, Dewi',
   },
   {
-    name: 'Kelompok 4 (Emerald Titan)',
+    name: 'Kelompok 4 (Buaya Mahakam)',
     color: 'from-emerald-500 to-teal-600',
     accentColor: '#059669',
     badgeBg: 'bg-emerald-500/20 text-emerald-300 border-emerald-400',
     borderColor: 'border-emerald-500',
     textColor: 'text-emerald-400',
-    avatar: '🐉',
+    avatar: '🐊',
     members: 'Eko, Nisa, Gilang',
   },
   {
-    name: 'Kelompok 5 (Solar Phoenix)',
+    name: 'Kelompok 5 (Bekantan Cerdik)',
     color: 'from-rose-500 to-pink-600',
     accentColor: '#e11d48',
     badgeBg: 'bg-rose-500/20 text-rose-300 border-rose-400',
     borderColor: 'border-rose-500',
     textColor: 'text-rose-400',
-    avatar: '🌟',
+    avatar: '🐒',
     members: 'Rizky, Maya, Tari',
   },
 ];

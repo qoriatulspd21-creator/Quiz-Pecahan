@@ -40,7 +40,7 @@ export const GameArenaHeader: React.FC<GameArenaHeaderProps> = ({
   const isTimeCritical = totalDuration > 0 && timeRemaining <= 15;
 
   return (
-    <div className="w-full bg-slate-950/95 border-b border-slate-800 px-4 sm:px-8 py-3.5 shadow-2xl">
+    <div className="w-full bg-stone-950/95 border-b border-emerald-900/40 px-4 sm:px-8 py-3.5 shadow-2xl">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Left: Round & Active Team Banner */}
         <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-start">
@@ -54,7 +54,7 @@ export const GameArenaHeader: React.FC<GameArenaHeaderProps> = ({
 
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-[11px] font-black tracking-widest text-cyan-400 uppercase">
+                <span className="text-[11px] font-black tracking-widest text-emerald-400 uppercase">
                   {isPracticeMode ? 'MODE LATIHAN BEBAS' : `GILIRAN BERTANDING: ${activeTeam.name}`}
                 </span>
                 {!isPracticeMode && (

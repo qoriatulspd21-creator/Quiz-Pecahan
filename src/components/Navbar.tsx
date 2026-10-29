@@ -22,22 +22,21 @@ export const Navbar: React.FC<NavbarProps> = ({
   isMatchActive = false,
 }) => {
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between gap-8 px-4 sm:px-8 py-3.5 bg-slate-950/90 backdrop-blur-md border-b border-cyan-900/40 text-slate-100">
+    <header className="sticky top-0 z-50 flex items-center justify-between gap-8 px-4 sm:px-8 py-3.5 bg-stone-950/90 backdrop-blur-md border-b border-emerald-900/40 text-stone-100">
       {/* Zone 1: Single text element wordmark */}
       <button
         onClick={() => onNavigate('MAIN_MENU')}
-        className="flex items-center gap-2 text-base sm:text-lg font-black tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-amber-400 whitespace-nowrap shrink-0 hover:opacity-90 transition-opacity"
+        className="text-base sm:text-lg font-black tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300 whitespace-nowrap shrink-0 hover:opacity-90 transition-opacity"
       >
-        <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse hidden sm:inline-block" />
-        FRACTION CHAMPIONS
+        FRACTION CHAMPIONS · RIMBA BORNEO
       </button>
 
       {/* Zone 2: 4-5 clean single-line navigation links */}
       <nav className="hidden md:flex items-center gap-6 text-xs sm:text-sm font-semibold tracking-wide text-slate-300">
         <button
           onClick={() => onNavigate('MAIN_MENU')}
-          className={`flex items-center gap-1.5 transition-colors whitespace-nowrap shrink-0 hover:text-cyan-300 ${
-            currentView === 'MAIN_MENU' ? 'text-cyan-400 font-bold' : ''
+          className={`flex items-center gap-1.5 transition-colors whitespace-nowrap shrink-0 hover:text-emerald-300 ${
+            currentView === 'MAIN_MENU' ? 'text-emerald-400 font-bold' : ''
           }`}
         >
           <Home className="w-4 h-4" />
@@ -46,8 +45,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         <button
           onClick={() => onNavigate('PRACTICE')}
-          className={`flex items-center gap-1.5 transition-colors whitespace-nowrap shrink-0 hover:text-cyan-300 ${
-            currentView === 'PRACTICE' ? 'text-cyan-400 font-bold' : ''
+          className={`flex items-center gap-1.5 transition-colors whitespace-nowrap shrink-0 hover:text-emerald-300 ${
+            currentView === 'PRACTICE' ? 'text-emerald-400 font-bold' : ''
           }`}
         >
           <BookOpen className="w-4 h-4" />
@@ -56,8 +55,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         <button
           onClick={() => onNavigate('HOW_TO_PLAY')}
-          className={`flex items-center gap-1.5 transition-colors whitespace-nowrap shrink-0 hover:text-cyan-300 ${
-            currentView === 'HOW_TO_PLAY' ? 'text-cyan-400 font-bold' : ''
+          className={`flex items-center gap-1.5 transition-colors whitespace-nowrap shrink-0 hover:text-emerald-300 ${
+            currentView === 'HOW_TO_PLAY' ? 'text-emerald-400 font-bold' : ''
           }`}
         >
           <HelpCircle className="w-4 h-4" />
@@ -66,8 +65,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         <button
           onClick={() => onNavigate('TEACHER_SETTINGS')}
-          className={`flex items-center gap-1.5 transition-colors whitespace-nowrap shrink-0 hover:text-cyan-300 ${
-            currentView === 'TEACHER_SETTINGS' ? 'text-cyan-400 font-bold' : ''
+          className={`flex items-center gap-1.5 transition-colors whitespace-nowrap shrink-0 hover:text-emerald-300 ${
+            currentView === 'TEACHER_SETTINGS' ? 'text-emerald-400 font-bold' : ''
           }`}
         >
           <Settings className="w-4 h-4" />
@@ -83,7 +82,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           title={soundEnabled ? 'Efek Suara Aktif' : 'Efek Suara Senyap'}
           className={`p-2 rounded-lg border transition-colors ${
             soundEnabled
-              ? 'bg-slate-800 border-cyan-500/40 text-cyan-300 hover:bg-slate-700'
+              ? 'bg-slate-800 border-emerald-500/40 text-emerald-300 hover:bg-slate-700'
               : 'bg-slate-900 border-slate-700 text-slate-500 hover:text-slate-400'
           }`}
         >
@@ -93,10 +92,10 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Music Synth Toggle */}
         <button
           onClick={onToggleBgm}
-          title={bgmEnabled ? 'BGM Musik Aktif' : 'BGM Musik Senyap'}
+          title={bgmEnabled ? 'Musik Rimba Aktif (Sape)' : 'Musik Rimba Senyap'}
           className={`p-2 rounded-lg border transition-colors ${
             bgmEnabled
-              ? 'bg-cyan-950/80 border-cyan-400 text-cyan-300 animate-pulse'
+              ? 'bg-emerald-950/80 border-emerald-400 text-emerald-300 animate-pulse'
               : 'bg-slate-900 border-slate-700 text-slate-500 hover:text-slate-400'
           }`}
         >

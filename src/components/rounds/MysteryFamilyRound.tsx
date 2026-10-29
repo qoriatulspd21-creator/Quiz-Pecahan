@@ -262,14 +262,14 @@ export const MysteryFamilyRound: React.FC<MysteryFamilyRoundProps> = ({
   return (
     <div className="max-w-5xl mx-auto px-4 py-6 space-y-6">
       {/* Round Briefing Banner */}
-      <div className="bg-slate-900/90 border border-sky-500/40 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xl">
+      <div className="bg-stone-900/90 border border-emerald-500/40 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xl">
         <div className="flex items-start gap-3">
-          <div className="w-10 h-10 rounded-xl bg-sky-500/20 border border-sky-400 flex items-center justify-center text-sky-300 shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400 flex items-center justify-center text-emerald-300 shrink-0">
             <Layers className="w-5 h-5" />
           </div>
           <div>
             <h3 className="text-base sm:text-lg font-black font-display text-white">
-              MISI: Kelompokkan Menjadi 2 Keluarga Pecahan Senilai
+              MISI RIMBA 1: Kelompokkan 2 Keluarga Pecahan Senilai
             </h3>
             <p className="text-xs text-slate-300">
               Pilih kartu pecahan di kolam bawah, lalu klik <strong>Kelompok A</strong> atau <strong>Kelompok B</strong>. Tiap kelompok berisi 4 kartu senilai.

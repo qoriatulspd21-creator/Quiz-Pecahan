@@ -220,30 +220,40 @@ class SoundManager {
     this.initContext();
     if (!this.ctx) return;
 
-    // A subtle, soothing tournament pulse
-    const synthNotes = [261.63, 329.63, 392.0, 523.25, 440.0, 392.0];
+    // Peaceful Borneo Rainforest & Dayak Sape pentatonic melody
+    // Warm acoustic pentatonic notes (D, F, G, A, C) resembling Borneo forest lutes
+    const sapeMelody = [
+      { freq: 293.66, dur: 0.38, gain: 0.032 }, // D4
+      { freq: 349.23, dur: 0.38, gain: 0.032 }, // F4
+      { freq: 392.00, dur: 0.48, gain: 0.038 }, // G4
+      { freq: 440.00, dur: 0.38, gain: 0.032 }, // A4
+      { freq: 523.25, dur: 0.52, gain: 0.028 }, // C5
+      { freq: 440.00, dur: 0.38, gain: 0.032 }, // A4
+      { freq: 392.00, dur: 0.48, gain: 0.038 }, // G4
+      { freq: 349.23, dur: 0.38, gain: 0.032 }, // F4
+    ];
     let step = 0;
 
     this.bgmInterval = window.setInterval(() => {
       if (!this.isBgmEnabled || !this.ctx) return;
       try {
-        const freq = synthNotes[step % synthNotes.length];
+        const note = sapeMelody[step % sapeMelody.length];
         const osc = this.ctx.createOscillator();
         const gain = this.ctx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
-        gain.gain.setValueAtTime(0.03, this.ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.35);
+        osc.type = 'triangle'; // warm organic chime timbre
+        osc.frequency.setValueAtTime(note.freq, this.ctx.currentTime);
+        gain.gain.setValueAtTime(note.gain, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + note.dur);
 
         osc.connect(gain);
         gain.connect(this.ctx.destination);
         osc.start();
-        osc.stop(this.ctx.currentTime + 0.35);
+        osc.stop(this.ctx.currentTime + note.dur);
         step++;
       } catch {
         // Safe fail
       }
-    }, 400);
+    }, 460);
   }
 
   private stopBgmLoop() {
